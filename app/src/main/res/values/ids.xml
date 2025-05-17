@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<attr name="paleTextColor" format="color"/>
+	<item name="tag_date" type="id"/>
 </resources>

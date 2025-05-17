@@ -1,78 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.CalendarApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/blue_1</item>
-        <item name="colorPrimaryVariant">@color/blue_2</item>
-        <item name="colorPrimaryContainer">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
+	<style name="Theme.CalendarApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+		<item name="colorPrimary">@color/blue_1</item>
+		<item name="colorPrimaryVariant">@color/blue_2</item>
+		<item name="colorPrimaryContainer">@color/white</item>
+		<item name="colorOnPrimary">@color/white</item>
 
-        <item name="colorSecondary">@color/blue_1</item>
-        <item name="colorSecondaryVariant">@color/blue_2</item>
-        <item name="colorSecondaryContainer">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
+		<item name="colorSecondary">@color/blue_1</item>
+		<item name="colorSecondaryVariant">@color/blue_2</item>
+		<item name="colorSecondaryContainer">@color/white</item>
+		<item name="colorOnSecondary">@color/white</item>
 
-        <item name="paleTextColor">@color/light_gray</item>
+		<item name="paleTextColor">@color/light_gray</item>
 
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-    </style>
+		<item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+	</style>
 
-    <style name="Theme.CalendarApp.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+	<style name="Theme.CalendarApp.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
 
-    <style name="Theme.CalendarApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="Theme.CalendarApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-
-    <!-- Table cells -->
-
-    <style name="Theme.CalendarApp.CalendarRow">
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-    </style>
-
-    <style name="Theme.CalendarApp.Cell">
-        <item name="android:textColor">@color/gray</item>
-        <item name="android:layout_weight">1</item>
-    </style>
-
-    <style name="Theme.CalendarApp.HeaderCell" parent="Theme.CalendarApp.Cell">
-        <item name="android:gravity">center_horizontal</item>
-    </style>
-
-    <style name="Theme.CalendarApp.WeekNumCell" parent="Theme.CalendarApp.Cell">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:layout_marginEnd">8dp</item>
-    </style>
-
-    <style name="Theme.CalendarApp.DayCell" parent="Theme.CalendarApp.Cell">
-        <item name="android:minWidth">40dp</item>
-        <item name="android:minHeight">40dp</item>
-        <item name="android:padding">0dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:background">@color/transparent</item>
-        <item name="android:backgroundTint">@color/transparent</item>
-    </style>
-
-    <style name="Theme.CalendarApp.SundayCell" parent="Theme.CalendarApp.DayCell">
-        <item name="android:textColor">@color/red_1</item>
-    </style>
-
-    <style name="Theme.CalendarApp.OtherMonthCell" parent="Theme.CalendarApp.DayCell">
-        <item name="android:textColor">?attr/paleTextColor</item>
-    </style>
+	<style name="Theme.CalendarApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+	<style name="Theme.CalendarApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
-    <!-- Tasks -->
+	<!-- Table cells -->
 
-    <style name="Theme.CalendarApp.Task">
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingStart">20dp</item>
-        <item name="android:paddingEnd">20dp</item>
-        <item name="android:background">@drawable/shape_rounded_corners</item>
-    </style>
+	<style name="Theme.CalendarApp.CalendarRow">
+		<item name="android:paddingTop">5dp</item>
+		<item name="android:paddingBottom">5dp</item>
+	</style>
+
+	<style name="Theme.CalendarApp.Cell">
+		<item name="android:textColor">@color/gray</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+
+	<style name="Theme.CalendarApp.HeaderCell" parent="Theme.CalendarApp.Cell">
+		<item name="android:gravity">center_horizontal</item>
+	</style>
+
+	<style name="Theme.CalendarApp.WeekNumCell" parent="Theme.CalendarApp.Cell">
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:textSize">11sp</item>
+		<item name="android:layout_marginEnd">8dp</item>
+	</style>
+
+	<style name="Theme.CalendarApp.DayCell" parent="Theme.CalendarApp.Cell">
+		<item name="android:minWidth">40dp</item>
+		<item name="android:minHeight">40dp</item>
+		<item name="android:padding">0dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:background">@color/transparent</item>
+		<item name="android:backgroundTint">@color/transparent</item>
+	</style>
+
+	<style name="Theme.CalendarApp.TodayCell" parent="Theme.CalendarApp.DayCell">
+		<item name="android:textColor">@color/blue_2</item>
+	</style>
+
+	<style name="Theme.CalendarApp.SundayCell" parent="Theme.CalendarApp.DayCell">
+		<item name="android:textColor">@color/red_1</item>
+	</style>
+
+	<style name="Theme.CalendarApp.OtherMonthCell" parent="Theme.CalendarApp.DayCell">
+		<item name="android:textColor">?attr/paleTextColor</item>
+	</style>
+
+
+	<!-- Tasks -->
+
+	<style name="Theme.CalendarApp.Task">
+		<item name="android:paddingTop">10dp</item>
+		<item name="android:paddingBottom">10dp</item>
+		<item name="android:paddingStart">20dp</item>
+		<item name="android:paddingEnd">20dp</item>
+		<item name="android:background">@drawable/shape_rounded_corners</item>
+	</style>
 </resources>

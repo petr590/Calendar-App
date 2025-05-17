@@ -1,170 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:orientation="vertical"
+		android:padding="15dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/yearMonth"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="28sp"
-            tools:text="2025 май"/>
+	<TextView
+			android:id="@+id/calendarTitle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="28sp"
+			tools:text="2025 май"/>
 
-    <TableLayout
-            android:id="@+id/calendar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+	<TableLayout
+			android:id="@+id/calendar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="20dp">
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow">
-            <TextView style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_mon" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_tue" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_wed" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_thu" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_fri" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_sat" style="@style/Theme.CalendarApp.HeaderCell"/>
-            <TextView android:text="@string/weekday_sun" style="@style/Theme.CalendarApp.HeaderCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow">
+			<TextView style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_mon" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_tue" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_wed" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_thu" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_fri" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_sat" style="@style/Theme.CalendarApp.HeaderCell"/>
+			<TextView android:text="@string/weekday_sun" style="@style/Theme.CalendarApp.HeaderCell"/>
+		</TableRow>
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow">
-            <TextView tools:text="18" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
-            <Button tools:text="28" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="29" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="30" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="1"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="2"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="3"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="4"  android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow">
+			<TextView tools:text="18" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
+			<Button tools:text="28" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="29" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="30" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="1"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="2"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="3"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="4"  android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
+		</TableRow>
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow">
-            <TextView tools:text="19" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
-            <Button tools:text="5"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="6"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="7"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="8"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="9"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="10" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="11" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow">
+			<TextView tools:text="19" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
+			<Button tools:text="5"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="6"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="7"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="8"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="9"  android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="10" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="11" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
+		</TableRow>
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow">
-            <TextView tools:text="20" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
-            <Button tools:text="12" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="13" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="14" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="15" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="16" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="17" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="18" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow">
+			<TextView tools:text="20" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
+			<Button tools:text="12" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="13" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="14" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="15" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="16" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="17" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="18" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
+		</TableRow>
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow">
-            <TextView tools:text="21" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
-            <Button tools:text="19" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="20" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="21" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="22" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="23" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="24" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="25" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow">
+			<TextView tools:text="21" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
+			<Button tools:text="19" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="20" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="21" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="22" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="23" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="24" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="25" android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
+		</TableRow>
 
-        <TableRow style="@style/Theme.CalendarApp.CalendarRow"
-                  android:id="@+id/lastRow">
-            <TextView tools:text="22" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
-            <Button tools:text="26" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="27" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="28" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="29" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="30" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="31" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
-            <Button tools:text="1"  android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
-        </TableRow>
+		<TableRow style="@style/Theme.CalendarApp.CalendarRow"
+				  android:id="@+id/lastRow">
+			<TextView tools:text="22" android:tag="weekNum" style="@style/Theme.CalendarApp.WeekNumCell"/>
+			<Button tools:text="26" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="27" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="28" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="29" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="30" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="31" android:tag="day" style="@style/Theme.CalendarApp.DayCell"/>
+			<Button tools:text="1"  android:tag="day" style="@style/Theme.CalendarApp.SundayCell"/>
+		</TableRow>
 
-    </TableLayout>
-
-
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/tasks"
-            android:textSize="20sp"/>
-
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Theme.CalendarApp.Task">
-
-        <CheckBox
-                android:tag="isTaskFinished"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <EditText
-                android:tag="taskText"
-                android:inputType="textAutoComplete"
-                android:hint="@string/add_task"
-                android:textSize="18sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+	</TableLayout>
 
 
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Theme.CalendarApp.Task">
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="40dp"
+			android:text="@string/tasks"
+			android:textSize="20sp"/>
 
-        <CheckBox
-                android:tag="isTaskFinished"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+	<Button
+			android:id="@+id/add_task"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/task_margin"
+			android:layout_marginBottom="@dimen/task_margin"
+			android:text="@string/add_task"
+			android:textSize="18sp"
+			app:backgroundTint="@color/gray"
+			style="@style/Theme.CalendarApp.Task"/>
 
-            <TextView
-                    android:tag="taskText"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Покормить черепах"/>
 
-            <TextView
-                    android:tag="taskTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    tools:text="18:35"/>
-
-            <ImageView
-                    android:tag="taskBell"
-                    android:src="@drawable/ic_bell"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
+	<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/tasksContainer"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
 
 </LinearLayout>
