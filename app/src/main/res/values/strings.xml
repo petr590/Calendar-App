@@ -4,7 +4,20 @@
 	<string name="action_settings">Settings</string>
 	<string name="tasks">Tasks</string>
 	<string name="add_task">Add a task</string>
+	<string name="task_description">Task description</string>
+	<string name="remind">Remind</string>
 	<string name="task_reminder_enabled">Task reminder enabled</string>
+	<string name="no_tasks">No tasks</string>
+
+	<string name="save">Save</string>
+	<string name="cancel">Cancel</string>
+	<string name="delete">Delete</string>
+	<string name="confirm_delete">Delete task?</string>
+
+	<string name="reminder_set_for">The reminder is set for %1$s</string>
+	<string name="reminder">Reminder</string>
+	<string name="complete">Complete</string>
+	<string name="hide">Hide</string>
 
 	<string name="january">January</string>
 	<string name="february">February</string>
@@ -26,4 +39,6 @@
 	<string name="weekday_fri">Fri</string>
 	<string name="weekday_sat">Sat</string>
 	<string name="weekday_sun">Sun</string>
+
+	<string name="database_error_message">Error when making a database query</string>
 </resources>

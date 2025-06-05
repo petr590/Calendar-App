@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="blue_1">#FF0090F0</color>
-	<color name="blue_2">#FF006FCB</color>
-	<color name="red_1">#FFCF0000</color>
-	<color name="red_2">#FF800004</color>
+	<color name="blue">#FF0090F0</color>
+	<color name="darker_blue">#FF006FCB</color>
+	<color name="red">#FFCF0000</color>
+	<color name="dark_red">#FF950000</color>
+
 	<color name="black">#FF000000</color>
+	<color name="dark_gray">#FF4B4B4B</color>
+	<color name="darker_gray">#FF575757</color>
+	<color name="gray">#FF707070</color>
+	<color name="lighter_gray">#FF909090</color>
+	<color name="light_gray">#FFC0C0C0</color>
 	<color name="white">#FFFFFFFF</color>
-	<color name="gray">#FF606060</color>
-	<color name="light_gray">#FFA0A0A0</color>
-	<color name="dark_gray">#FF404040</color>
+
+	<color name="shading">#60000000</color>
 	<color name="transparent">#00000000</color>
 </resources>

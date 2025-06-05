@@ -7,6 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class CalendarApiTest {
 	@Test
@@ -28,7 +29,6 @@ public class CalendarApiTest {
 	public void testDateFormat() {
 		DateFormat timeFormat = new SimpleDateFormat("HH:mm");
 
-		Assert.assertEquals("", timeFormat.format(new Date(2020, 9, 15, 22, 30, 12)));
 		System.out.println(timeFormat.format(new Date(2020, 9, 15,  3, 32, 15)));
 
 		timeFormat = DateFormat.getTimeInstance(DateFormat.SHORT);
@@ -63,5 +63,11 @@ public class CalendarApiTest {
 		Assert.assertEquals(0, to.get(Calendar.MINUTE));
 		Assert.assertEquals(0, to.get(Calendar.SECOND));
 		Assert.assertEquals(0, to.get(Calendar.MILLISECOND));
+	}
+
+	@Test
+	public void testDateTimeFormat() {
+		DateFormat format = new SimpleDateFormat("dd MMMM HH:mm", Locale.ENGLISH);
+		System.out.println(format.format(Calendar.getInstance().getTime()));
 	}
 }

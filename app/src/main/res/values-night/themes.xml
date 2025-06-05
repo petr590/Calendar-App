@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.CalendarApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/blue_1</item>
-        <item name="colorPrimaryVariant">@color/blue_2</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="backgroundColor">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
 
-        <item name="colorSecondary">@color/blue_1</item>
-        <item name="colorSecondaryVariant">@color/blue_2</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorPrimary">@color/darker_gray</item>
+        <item name="colorPrimaryVariant">@color/dark_gray</item>
+        <item name="colorPrimaryContainer">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/darker_blue</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorSurface">@color/dark_gray</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <item name="cardBackgroundColor">@color/dark_gray</item>
 
         <item name="paleTextColor">@color/dark_gray</item>
 

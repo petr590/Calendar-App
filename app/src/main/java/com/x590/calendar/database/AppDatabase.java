@@ -1,4 +1,4 @@
-package com.x590.calendar;
+package com.x590.calendar.database;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;

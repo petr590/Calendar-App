@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<style name="Theme.CalendarApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-		<item name="colorPrimary">@color/blue_1</item>
-		<item name="colorPrimaryVariant">@color/blue_2</item>
-		<item name="colorPrimaryContainer">@color/white</item>
-		<item name="colorOnPrimary">@color/white</item>
+		<item name="backgroundColor">@color/white</item>
+		<item name="colorOnBackground">@color/black</item>
 
-		<item name="colorSecondary">@color/blue_1</item>
-		<item name="colorSecondaryVariant">@color/blue_2</item>
+		<item name="colorPrimary">@color/light_gray</item>
+		<item name="colorPrimaryVariant">@color/lighter_gray</item>
+		<item name="colorPrimaryContainer">@color/white</item>
+		<item name="colorOnPrimary">@color/black</item>
+
+		<item name="colorSecondary">@color/blue</item>
+		<item name="colorSecondaryVariant">@color/darker_blue</item>
 		<item name="colorSecondaryContainer">@color/white</item>
 		<item name="colorOnSecondary">@color/white</item>
+
+		<item name="colorSurface">@color/white</item>
+		<item name="colorOnSurface">@color/black</item>
+
+		<item name="cardBackgroundColor">@color/light_gray</item>
 
 		<item name="paleTextColor">@color/light_gray</item>
 
@@ -48,21 +56,23 @@
 	</style>
 
 	<style name="Theme.CalendarApp.DayCell" parent="Theme.CalendarApp.Cell">
-		<item name="android:minWidth">40dp</item>
-		<item name="android:minHeight">40dp</item>
+		<item name="android:minWidth">@dimen/round_diameter</item>
+		<item name="android:minHeight">@dimen/round_diameter</item>
+		<item name="android:width">@dimen/round_diameter</item>
+		<item name="android:height">@dimen/round_diameter</item>
 		<item name="android:padding">0dp</item>
 		<item name="android:textColor">@color/black</item>
 		<item name="android:textSize">14sp</item>
 		<item name="android:background">@color/transparent</item>
-		<item name="android:backgroundTint">@color/transparent</item>
+		<item name="android:backgroundTint">?attr/colorOnPrimary</item>
 	</style>
 
 	<style name="Theme.CalendarApp.TodayCell" parent="Theme.CalendarApp.DayCell">
-		<item name="android:textColor">@color/blue_2</item>
+		<item name="android:textColor">?attr/colorSecondaryVariant</item>
 	</style>
 
 	<style name="Theme.CalendarApp.SundayCell" parent="Theme.CalendarApp.DayCell">
-		<item name="android:textColor">@color/red_1</item>
+		<item name="android:textColor">@color/red</item>
 	</style>
 
 	<style name="Theme.CalendarApp.OtherMonthCell" parent="Theme.CalendarApp.DayCell">
@@ -74,9 +84,44 @@
 
 	<style name="Theme.CalendarApp.Task">
 		<item name="android:paddingTop">10dp</item>
+		<item name="android:paddingStart">20dp</item>
+		<item name="android:background">@drawable/shape_rounded_corners</item>
+		<item name="android:backgroundTint">?attr/cardBackgroundColor</item>
+	</style>
+
+	<style name="Theme.CalendarApp.TaskEditPanel">
+		<item name="android:padding">10dp</item>
+		<item name="android:background">@drawable/shape_rounded_corners_top</item>
+		<item name="android:backgroundTint">?attr/colorSurface</item>
+		<item name="android:textColor">?attr/colorOnSurface</item>
+	</style>
+
+	<style name="Theme.CalendarApp.Button">
+		<item name="android:background">@drawable/shape_rounded_corners</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="Theme.CalendarApp.Button.SecondaryColor">
+		<item name="backgroundTint">?attr/colorSecondary</item> <!-- Так надо, работает - не трогай -->
+		<item name="android:textColor">?attr/colorOnSecondary</item>
+	</style>
+
+
+	<style name="Theme.CalendarApp.AlarmButton">
+		<item name="android:textSize">@dimen/text_big</item>
+		<item name="layout_constraintHorizontal_weight">1</item>
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingTop">10dp</item>
 		<item name="android:paddingBottom">10dp</item>
 		<item name="android:paddingStart">20dp</item>
 		<item name="android:paddingEnd">20dp</item>
 		<item name="android:background">@drawable/shape_rounded_corners</item>
+	</style>
+
+	<style name="Theme.CalendarApp.AlarmButton.SecondaryColor">
+		<item name="backgroundTint">?attr/colorSecondary</item>
+		<item name="android:textColor">?attr/colorOnSecondary</item>
 	</style>
 </resources>
