@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.x590.calendar.CalendarApp;
 import com.x590.calendar.R;
+import com.x590.calendar.database.PeriodUnit;
 import com.x590.calendar.database.Task;
 import com.x590.calendar.databinding.ItemTaskBinding;
 import lombok.val;
@@ -32,33 +33,43 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 		private static final DateFormat TIME_FORMAT = DateFormat.getTimeInstance(DateFormat.SHORT);
 		private final TaskAdapter adapter;
 		private final ItemTaskBinding binding;
-		private final MainActivity mainActivity;
-
 		private Task task;
 
 		public TaskViewHolder(TaskAdapter adapter, ItemTaskBinding binding) {
 			super(binding.getRoot());
 			this.adapter = adapter;
 			this.binding = binding;
-			this.mainActivity = (MainActivity) itemView.getContext();
+		}
+
+		private MainActivity getMainActivity() {
+			return (MainActivity) itemView.getContext();
 		}
 
 		public void bind(Task task) {
 			this.task = task;
 
-			binding.tvTaskDescription.setText(task.getDescription());
-			binding.tvTaskTime.setText(TIME_FORMAT.format(task.getTimestamp().getTime()));
-			binding.cbTaskFinished.setChecked(task.isFinished());
-			binding.ivTaskReminder.setVisibility(task.isReminderEnabled() ? View.VISIBLE : View.GONE);
+			binding.taskDescription.setText(task.getDescription());
+			binding.taskTime.setText(TIME_FORMAT.format(task.getTimestamp().getTime()));
+			binding.isTaskFinished.setChecked(task.isFinished());
+			binding.taskReminderIcon.setVisibility(task.isReminderEnabled() ? View.VISIBLE : View.GONE);
 
-			binding.cbTaskFinished.setOnCheckedChangeListener((checkBox, checked) -> {
+			if (task.hasPeriod()) {
+				binding.taskPeriod.setText(getPeriodString(task.getPeriod(), task.requirePeriodUnit()));
+				binding.taskPeriod.setVisibility(View.VISIBLE);
+			} else {
+				binding.taskPeriod.setText("");
+				binding.taskPeriod.setVisibility(View.GONE);
+			}
+
+			itemView.setOnClickListener(itemView -> getMainActivity().showTaskEditPanel(task, getAdapterPosition()));
+
+			binding.isTaskFinished.setOnCheckedChangeListener((checkBox, checked) -> {
 				task.setFinished(checked);
-				mainActivity.updateNotification(task);
+				NotificationUtil.updateNotification(itemView.getContext(), task);
 				CalendarApp.databaseRequest(database -> database.taskDao().update(task));
 			});
 
-			binding.ivDelete.setOnClickListener(button -> confirmDelete());
-			itemView.setOnClickListener(itemView -> mainActivity.showTaskEditPanel(task, getAdapterPosition()));
+			binding.deleteIcon.setOnClickListener(button -> confirmDelete());
 		}
 
 		private void confirmDelete() {
@@ -85,8 +96,19 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
 		private void deleteTask() {
 			adapter.deleteTask(getAdapterPosition());
-			mainActivity.removeNotification(task);
+			NotificationUtil.removeNotification(itemView.getContext(), task);
 			CalendarApp.databaseRequest(database -> database.taskDao().delete(task));
+		}
+
+		private String getPeriodString(int period, PeriodUnit unit) {
+			if (period == 1) {
+				String[] array = getMainActivity().getResources().getStringArray(R.array.every_period_unit);
+				return array[unit.position()];
+			}
+
+			return getMainActivity().getResources().getQuantityString(
+					task.requirePeriodUnit().getPluralId(), period, period
+			);
 		}
     }
 

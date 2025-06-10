@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:app="http://schemas.android.com/apk/res-auto"
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
@@ -71,88 +70,11 @@
 			android:layout_height="match_parent"
 			android:background="@color/shading"/>
 
-
-	<androidx.constraintlayout.widget.ConstraintLayout
+	<androidx.fragment.app.FragmentContainerView
 			android:id="@+id/taskEditPanel"
+			android:name="com.x590.calendar.ui.TaskEditPanelFragment"
 			android:visibility="gone"
-			tools:visibility="visible"
-			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_gravity="bottom"
-			style="@style/Theme.CalendarApp.TaskEditPanel">
-
-		<EditText
-				android:id="@+id/taskDescription"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintTop_toTopOf="parent"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:inputType="textCapSentences"
-				android:hint="@string/task_description"
-				android:autofillHints=""/>
-
-		<CheckBox
-				android:id="@+id/taskReminderEnabled"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/taskDescription"
-				android:text="@string/remind"
-				android:textSize="16sp"/>
-
-		<View
-				android:layout_width="match_parent"
-				android:layout_height="1dp"
-				android:layout_marginStart="4dp"
-				android:layout_marginEnd="4dp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="@id/taskTimePicker"
-				android:background="?attr/colorOnPrimary"/>
-
-		<TimePicker
-				android:id="@+id/taskTimePicker"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="10dp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/taskReminderEnabled"
-				android:timePickerMode="spinner"/>
-
-		<View
-				android:layout_width="match_parent"
-				android:layout_height="1dp"
-				android:layout_marginStart="4dp"
-				android:layout_marginEnd="4dp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintBottom_toBottomOf="@id/taskTimePicker"
-				android:background="?attr/colorOnPrimary"/>
-
-		<Button
-				android:id="@+id/saveTaskButton"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="15dp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintEnd_toStartOf="@id/cancelTaskEditButton"
-				app:layout_constraintTop_toBottomOf="@id/taskTimePicker"
-				app:layout_constraintHorizontal_chainStyle="spread"
-				android:text="@string/save"
-				style="@style/Theme.CalendarApp.Button.SecondaryColor"/>
-
-		<Button
-				android:id="@+id/cancelTaskEditButton"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="15dp"
-				app:layout_constraintStart_toEndOf="@id/saveTaskButton"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/taskTimePicker"
-				app:layout_constraintHorizontal_chainStyle="spread"
-				android:text="@string/cancel"
-				style="@style/Theme.CalendarApp.Button"/>
-
-	</androidx.constraintlayout.widget.ConstraintLayout>
+			android:layout_gravity="bottom"/>
 </FrameLayout>

@@ -5,7 +5,7 @@
 	<dimen name="round_radius">22dp</dimen>
 	<dimen name="round_diameter">44dp</dimen>
 
+	<dimen name="text_normal">16sp</dimen>
 	<dimen name="text_bigger">20sp</dimen>
 	<dimen name="text_big">24sp</dimen>
-	<dimen name="text_header">28sp</dimen>
 </resources>

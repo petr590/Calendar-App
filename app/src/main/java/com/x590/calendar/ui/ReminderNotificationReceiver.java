@@ -12,7 +12,6 @@ import com.x590.calendar.CalendarApp;
 import com.x590.calendar.R;
 import com.x590.calendar.database.Task;
 import lombok.val;
-import org.jetbrains.annotations.Nullable;
 
 public class ReminderNotificationReceiver extends BroadcastReceiver {
 	private static final String CHANNEL_ID = "calendar_app";
@@ -39,13 +38,15 @@ public class ReminderNotificationReceiver extends BroadcastReceiver {
 
 		CalendarApp.databaseRequest(
 				database -> database.taskDao().getById(id),
-				task -> sendNotification(context, task)
+				task -> {
+					if (task == null) return;
+					sendNotification(context, task);
+					NotificationUtil.updateNotification(context, task);
+				}
 		);
 	}
 
-	private void sendNotification(Context context, @Nullable Task task) {
-		if (task == null) return;
-
+	private void sendNotification(Context context, Task task) {
 		val intent = new Intent(context, MainActivity.class)
 				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 

@@ -6,8 +6,11 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 import androidx.room.Room;
+import androidx.room.migration.Migration;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.x590.calendar.database.AppDatabase;
 import lombok.Getter;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -31,7 +34,13 @@ public class CalendarApp extends Application {
 		instance = this;
 
 		database = Room.databaseBuilder(this, AppDatabase.class, "database")
-				.fallbackToDestructiveMigration()
+				.addMigrations(new Migration(1, 2) {
+					@Override
+					public void migrate(@NotNull SupportSQLiteDatabase database) {
+						database.execSQL("ALTER TABLE tasks ADD COLUMN period INTEGER NOT NULL DEFAULT 0");
+						database.execSQL("ALTER TABLE tasks ADD COLUMN periodUnit INTEGER");
+					}
+				})
 				.build();
 
 		executor = Executors.newSingleThreadExecutor();

@@ -1,5 +1,6 @@
 package com.x590.calendar;
 
+import android.content.Context;
 import lombok.experimental.UtilityClass;
 
 import java.text.DateFormat;
@@ -13,7 +14,9 @@ public class Util {
 	private static final DateFormat DATETIME_FORMAT_EN = new SimpleDateFormat("MMMM\u00A0d,\u00A0HH:mm", Locale.ENGLISH);
 
 	/** @return Формат с указанием числа, месяца, часов и минут для системной локали. */
-	public static DateFormat getDateTimeFormat(Locale locale) {
+	public static DateFormat getDateTimeFormat(Context context) {
+		Locale locale = context.getResources().getConfiguration().getLocales().get(0);
+
 		if (locale.getLanguage().equals("ru"))
 			return DATETIME_FORMAT_RU;
 

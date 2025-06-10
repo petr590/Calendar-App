@@ -2,6 +2,7 @@ package com.x590.calendar.database;
 
 import androidx.room.*;
 import com.x590.calendar.Util;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Calendar;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 @Dao
 public interface TaskDao {
 	@Query("SELECT * FROM tasks WHERE id = :id")
-	Task getById(int id);
+	@Nullable Task getById(int id);
 
 	@Query("SELECT * FROM tasks " +
 			"WHERE timestamp BETWEEN :from AND :to " +

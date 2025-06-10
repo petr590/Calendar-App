@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		tools:context=".ui.TaskEditPanelFragment"
+
+		android:id="@+id/taskEditPanel"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		style="@style/Theme.CalendarApp.TaskEditPanel">
+
+	<EditText
+			android:id="@+id/taskDescription"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="textCapSentences"
+			android:hint="@string/task_description"
+			android:autofillHints=""/>
+
+	<CheckBox
+			android:id="@+id/taskReminderEnabled"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/taskDescription"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/remind"
+			android:textSize="@dimen/text_normal"/>
+
+	<View	app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/taskTimePicker"
+			style="@style/Theme.CalendarApp.Separator"/>
+
+	<TimePicker
+			android:id="@+id/taskTimePicker"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/taskReminderEnabled"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:timePickerMode="spinner"/>
+
+	<View	app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintBottom_toBottomOf="@id/taskTimePicker"
+			style="@style/Theme.CalendarApp.Separator"/>
+
+	<TextView
+			android:id="@+id/periodText"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/taskTimePicker"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/period"
+			android:textSize="@dimen/text_bigger"
+			android:padding="10dp"/>
+
+	<EditText
+			android:id="@+id/taskPeriod"
+			android:inputType="number"
+			android:autofillHints=""
+			app:layout_constraintStart_toEndOf="@id/periodText"
+			app:layout_constraintTop_toTopOf="@id/periodText"
+			app:layout_constraintBottom_toBottomOf="@id/periodText"
+			android:minWidth="50sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	<Spinner
+			android:id="@+id/taskPeriodUnit"
+			android:spinnerMode="dialog"
+			android:entries="@array/period_units"
+			app:layout_constraintStart_toEndOf="@id/taskPeriod"
+			app:layout_constraintTop_toTopOf="@id/periodText"
+			app:layout_constraintBottom_toBottomOf="@id/periodText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dp"
+			style="@style/Theme.CalendarApp.Spinner"/>
+
+
+	<View	app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/periodText"
+			style="@style/Theme.CalendarApp.Separator"/>
+
+	<Button
+			android:id="@+id/saveTaskButton"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/cancelTaskEditButton"
+			app:layout_constraintTop_toBottomOf="@id/periodText"
+			app:layout_constraintHorizontal_chainStyle="spread"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:text="@string/save"
+			style="@style/Theme.CalendarApp.Button.SecondaryColor"/>
+
+	<Button
+			android:id="@+id/cancelTaskEditButton"
+			app:layout_constraintStart_toEndOf="@id/saveTaskButton"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/periodText"
+			app:layout_constraintHorizontal_chainStyle="spread"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:text="@string/cancel"
+			style="@style/Theme.CalendarApp.Button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

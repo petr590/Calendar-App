@@ -1,45 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Календарь</string>
-    <string name="action_settings">Настройки</string>
-    <string name="tasks">Задачи</string>
-    <string name="add_task">Добавить задачу</string>
-    <string name="task_description">Описание задачи</string>
+	<string name="app_name">Календарь</string>
+	<string name="action_settings">Настройки</string>
+	<string name="tasks">Задачи</string>
+	<string name="add_task">Добавить задачу</string>
+	<string name="task_description">Описание задачи</string>
 	<string name="remind">Напомнить</string>
+	<string name="period">Период</string>
 	<string name="task_reminder_enabled">Напоминание о задаче включено</string>
-    <string name="no_tasks">Нет задач</string>
+	<string name="no_tasks">Нет задач</string>
 
-    <string name="save">Сохранить</string>
-    <string name="cancel">Отмена</string>
+	<string-array name="period_units">
+		<item>минуты</item>
+		<item>часы</item>
+		<item>дни</item>
+		<item>недели</item>
+		<item>месяцы</item>
+		<item>годы</item>
+	</string-array>
+
+	<string-array name="every_period_unit">
+		<item>каждую минуту</item>
+		<item>каждый час</item>
+		<item>каждый день</item>
+		<item>каждую неделю</item>
+		<item>каждый месяц</item>
+		<item>каждый год</item>
+	</string-array>
+
+	<plurals name="every_n_minutes">
+		<item quantity="one">каждую %d минуту</item>
+		<item quantity="few">каждые %d минуты</item>
+		<item quantity="many">каждые %d минут</item>
+	</plurals>
+
+	<plurals name="every_n_hours">
+		<item quantity="one">каждый %d час</item>
+		<item quantity="few">каждые %d часа</item>
+		<item quantity="many">каждые %d часов</item>
+	</plurals>
+
+	<plurals name="every_n_days">
+		<item quantity="one">каждый %d день</item>
+		<item quantity="few">каждые %d дня</item>
+		<item quantity="many">каждые %d дней</item>
+	</plurals>
+
+	<plurals name="every_n_weeks">
+		<item quantity="one">каждую %d неделю</item>
+		<item quantity="few">каждые %d недели</item>
+		<item quantity="many">каждые %d недель</item>
+	</plurals>
+
+	<plurals name="every_n_months">
+		<item quantity="one">каждый %d месяц</item>
+		<item quantity="few">каждые %d месяца</item>
+		<item quantity="many">каждые %d месяцев</item>
+	</plurals>
+
+	<plurals name="every_n_years">
+		<item quantity="one">каждый %d год</item>
+		<item quantity="few">каждые %d года</item>
+		<item quantity="many">каждые %d лет</item>
+	</plurals>
+
+
+	<string name="save">Сохранить</string>
+	<string name="cancel">Отмена</string>
 	<string name="delete">Удалить</string>
-    <string name="confirm_delete">Удалить задачу?</string>
+	<string name="confirm_delete">Удалить задачу?</string>
 
-    <string name="reminder_set_for">Напоминание установлено на %1$s</string>
-    <string name="reminder">Напоминание</string>
-    <string name="complete">Выполнить</string>
-    <string name="hide">Скрыть</string>
+	<string name="reminder_set_for">Напоминание установлено на %1$s</string>
+	<string name="reminder">Напоминание</string>
+	<string name="complete">Выполнить</string>
+	<string name="hide">Скрыть</string>
 
 	<string name="january">Январь</string>
-    <string name="february">Февраль</string>
-    <string name="march">Март</string>
-    <string name="april">Апрель</string>
-    <string name="may">Май</string>
-    <string name="june">Июнь</string>
-    <string name="july">Июль</string>
-    <string name="august">Август</string>
-    <string name="september">Сентябрь</string>
-    <string name="october">Октябрь</string>
-    <string name="november">Ноябрь</string>
-    <string name="december">Декабрь</string>
+	<string name="february">Февраль</string>
+	<string name="march">Март</string>
+	<string name="april">Апрель</string>
+	<string name="may">Май</string>
+	<string name="june">Июнь</string>
+	<string name="july">Июль</string>
+	<string name="august">Август</string>
+	<string name="september">Сентябрь</string>
+	<string name="october">Октябрь</string>
+	<string name="november">Ноябрь</string>
+	<string name="december">Декабрь</string>
 
-    <string name="weekday_mon">Пн</string>
-    <string name="weekday_tue">Вт</string>
-    <string name="weekday_wed">Ср</string>
-    <string name="weekday_thu">Чт</string>
-    <string name="weekday_fri">Пт</string>
-    <string name="weekday_sat">Сб</string>
-    <string name="weekday_sun">Вс</string>
-    <string name="yes">Да</string>
+	<string name="weekday_mon">Пн</string>
+	<string name="weekday_tue">Вт</string>
+	<string name="weekday_wed">Ср</string>
+	<string name="weekday_thu">Чт</string>
+	<string name="weekday_fri">Пт</string>
+	<string name="weekday_sat">Сб</string>
+	<string name="weekday_sun">Вс</string>
+	<string name="yes">Да</string>
 
-    <string name="database_error_message">Ошибка при выполнении запроса к базе данных</string>
+	<string name="database_error_message">Ошибка при выполнении запроса к базе данных</string>
 </resources>

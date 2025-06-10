@@ -6,8 +6,58 @@
 	<string name="add_task">Add a task</string>
 	<string name="task_description">Task description</string>
 	<string name="remind">Remind</string>
+	<string name="period">Period</string>
 	<string name="task_reminder_enabled">Task reminder enabled</string>
 	<string name="no_tasks">No tasks</string>
+
+	<string-array name="period_units">
+		<item>minutes</item>
+		<item>hours</item>
+		<item>days</item>
+		<item>weeks</item>
+		<item>months</item>
+		<item>years</item>
+	</string-array>
+
+	<string-array name="every_period_unit">
+		<item>every minute</item>
+		<item>every hour</item>
+		<item>every day</item>
+		<item>every week</item>
+		<item>every month</item>
+		<item>every year</item>
+	</string-array>
+
+	<plurals name="every_n_minutes">
+		<item quantity="one">every minute</item>
+		<item quantity="other">every %d minutes</item>
+	</plurals>
+
+	<plurals name="every_n_hours">
+		<item quantity="one">every hour</item>
+		<item quantity="other">every %d hours</item>
+	</plurals>
+
+	<plurals name="every_n_days">
+		<item quantity="one">every day</item>
+		<item quantity="other">every %d days</item>
+	</plurals>
+
+	<plurals name="every_n_weeks">
+		<item quantity="one">every week</item>
+		<item quantity="other">every %d weeks</item>
+	</plurals>
+
+	<plurals name="every_n_months">
+		<item quantity="one">every month</item>
+		<item quantity="other">every %d months</item>
+	</plurals>
+
+	<plurals name="every_n_years">
+		<item quantity="one">every year</item>
+		<item quantity="other">every %d years</item>
+	</plurals>
+
 
 	<string name="save">Save</string>
 	<string name="cancel">Cancel</string>

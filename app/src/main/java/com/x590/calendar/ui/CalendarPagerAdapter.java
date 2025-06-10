@@ -40,11 +40,13 @@ public class CalendarPagerAdapter extends RecyclerView.Adapter<CalendarPagerAdap
 		this.dayChangedListener = dayChangedListener;
 	}
 
+	/** @return Выбранный день, может не соответствовать месяцу на экране */
 	public Calendar getCurrentDay() {
 		return (Calendar) Objects.requireNonNull(currentDayButton).getTag(R.id.tag_date);
 	}
 
-	public Calendar getCurrentMonthByPos(int position) {
+	/** @return Дату месяца, соответствующего указанной позиции */
+	public Calendar getMonthByPos(int position) {
 		Calendar month = (Calendar) initialDate.clone();
 		month.add(Calendar.MONTH, position - START_INDEX);
 		return month;
@@ -131,7 +133,7 @@ public class CalendarPagerAdapter extends RecyclerView.Adapter<CalendarPagerAdap
 
 	@Override
 	public void onBindViewHolder(@NotNull MonthViewHolder holder, int position) {
-		holder.bind(getCurrentMonthByPos(position));
+		holder.bind(getMonthByPos(position));
 	}
 
 	@Override
